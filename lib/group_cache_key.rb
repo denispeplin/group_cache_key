@@ -4,7 +4,7 @@ require 'digest/md5'
 
 ActiveRecord::Base.class_eval {
   Array.class_eval {
-    def cache_key
+    def group_cache_key
       if self.empty?
         'empty/' + self.object_id.to_s
       else
